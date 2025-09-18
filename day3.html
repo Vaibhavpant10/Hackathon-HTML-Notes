@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day3 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>Day3 Notes:</h1>
+        <nav>
+            <a href="home.html">Home</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day2.html" target="_blank">Prev</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day4.html" target="_blank">Next</a>  
+        </nav>
+        <hr>
+
+        <h2><h2>Welcome to Day3.</h2>
+        <hr>
+        <table width="100%">
+  <tr>
+   
+    <td width="25%" valign="top">
+      <h3>📑 Topics Overview</h3>
+      <ul>
+        <li>  Understanding File Paths</li>
+        <li> Types of File Paths</li>
+        <li> Relative Path</li>
+        <li>Absolute Path</li>
+        <li>Absolute Path in Windows</li>
+        <li> HTML Boilerplate  </li>
+        <li>    class and id (The Labels for the Box)  </li>
+        <li> The span (The Inline Highlighter)</li>
+
+       
+      
+       
+      </ul>
+    </td>
+</h2>
+<hr>
+
+    
+
+    <td width="75%" valign="top">
+    </table>
+    <hr>
+    <h2> - Understanding File Paths</h2>
+    <p>
+        A file path is a string that specifies the location of a file or directory in a file system. <br> It provides a way to navigate and access files on a computer or server. <br>File paths can be absolute or relative, depending on how they are defined.
+    </p>
+    <h2>- Types of File Paths</h2>
+    <p>
+        There are two main types of file paths: <b>absolute</b> paths and <b>relative</b> paths.
+    </p>
+    <h2>- Relative Path</h2>
+    <p>
+        A relative file path gives directions to a file starting from the location of the file you are currently in. <br>You will use this 99% of the time for linking your own files together (images, CSS, other HTML pages).
+    </p>
+    <img src="rel-filepath.png" alt="relative filepath" height="200px" width="300px">
+
+    <h2>- Absolute Path</h2>
+    <p>
+        An absolute file path gives the full, complete URL to a resource on the web. It starts with http:// or https://.
+    </p>
+    <h3>When to use it:</h3>
+    <p>You ONLY use absolute paths when you are linking to a resource that is NOT on your own website.</p>
+    <ul>
+        <li>Linking to another website.</li>
+        <li>Using a font from Google Fonts.</li>
+        <li>Using an image from an image-hosting service</li>
+    </ul>
+    <img src="absu.jpeg" alt=" absolute filepath" height="200px" width="300px">
+
+    <h3>The Critical "Why": Why not use absolute paths for your own files?</h3>
+    <p>
+        If you use absolute paths for your own files, then if you ever move your website to a different domain (for example, from your local computer to a live web server), all of your links will break. <br>Using relative paths ensures that your links will still work regardless of where your website is hosted.
+    </p>
+    <h2>- Absolute Path in Windows</h2>
+    <p>
+        The Windows file system is organized into separate drives, each identified by a letter (like C:, D:, etc.).
+    </p>
+    <ul>
+        <li>Starting Point (The Root):An absolute path in Windows <br>always starts with a drive letter followed by a colon and a backslash, <br>like C:\. This is the "root" of that specific drive.</li>
+        <li>Directory Separator: Windows uses a backslash \ to separate directories and files in the path.</li>
+    </ul>
+    <h3>Windows Structure:</h3>
+    <p>Drive:\Folder\SubFolder\file.txt</p>
+    <h3>Example:</h3>
+    <p>Imagine a file named report.docx <br>located in the Documents folder of a user named JohnDoe on the main C: drive.</p>
+    <h3>The absolute path would be:</h3>
+    <p>C:\Users\JohnDoe\Documents\report.docx</p>
+    <h3>Let's break it down:</h3>
+    <ul>
+        <li>C:\ - Start at the root of the C drive.</li>
+        <li>Users - Go into the "Users" folder.</li>
+        <li>JohnDoe - Go into the "JohnDoe" folder.</li>
+        <li>Documents - Go into the "Documents" folder.</li>
+        <li>report.docx - Here is the file.</li>
+    </ul>
+    <h2>- HTML Boilerplate </h2>
+    <p>
+        An HTML boilerplate is a basic template that provides the essential structure and elements needed to start an HTML document. <br>It serves as a starting point for web developers, allowing them to quickly set up a new web page without having to write the same foundational code from scratch each time.
+    </p>
+    <img src="boilerplate.jpg" alt=" boilerplate" height="200px" width="300px">
+
+    <h3>Why Use a Boilerplate if the Browser Fixes Everything?</h3>
+    <p>
+        You're right that for a simple "Hello World" page,<br> it looks the same. But the boilerplate isn't about making a simple page look right;<br> it's about making a professional, reliable, and future-proof website.
+    </p>
+    <h3>Here is why you're playing with fire by omitting it:</h3>
+    <ol>
+        <li>
+            Unpredictable Rendering (Quirks Mode): The biggest danger.<br> Your CSS might work differently across Chrome, Firefox, and Safari because each browser has its own slightly different implementation of quirks mode.<br> What looks good on your machine might look broken on someone else's. Using !DOCTYPE html puts all browsers into Standards Mode, which is predictable and consistent.
+        </li>
+        <li>Broken Characters: Your site might look fine until you need to write "50€" or "resumé".<br> Without charset="UTF-8", those characters can easily break, making your site look unprofessional.</li>
+
+        <li>Bad Mobile Experience: Without the <meta name="viewport"> tag, <br>your website will be almost unusable on a mobile phone. It will appear as a tiny, zoomed-out version of the desktop site</li>
+
+        <li>Poor SEO and Accessibility: Search engines and screen readers rely on the boilerplate tags (lang, title) to understand your page. <br>A page without them is a "mystery document." It will rank lower in search results and be more difficult for users with disabilities to navigate.</li>
+    </ol>
+
+    <h2> class and id (The Labels for the Box) </h2>
+    <p>
+        In HTML and CSS, class and id are attributes used to identify and style elements on a web page. They serve as labels that allow you to apply specific styles or behaviors to those elements.
+    </p>
+    <h2>The span (The Inline Highlighter)</h2>
+    <p>
+        The span element in HTML is an inline container used to group and apply styles or attributes to a specific portion of text or other inline elements within a document. <br> It does not inherently represent anything on its own but is commonly used for styling purposes with CSS or for applying JavaScript functionality.
+    </p>
+
+    <h2>>Quick Quiz</h2>
+    <h3>> Which is the correct way to give an element an ID in HTML?</h3>
+    <form>
+  <input type="radio" name="q1"> &lt;p id="para1"&gt;This is a paragraph&lt;/p&gt;  <br>
+  <input type="radio" name="q1"> &lt;p id:para1&gt;This is a paragraph&lt;/p&gt; <br>
+  <input type="radio" name="q1"> &lt;p #para1&gt;This is a paragraph&lt;/p&gt; <br>
+  <input type="radio" name="q1"> &lt;p para1&gt;This is a paragraph&lt;/p&gt; <br>
+</form>
+<h3> Which is the correct way to give an element a class in HTML?</h3>
+<form>
+  <input type="radio" name="q2"> &lt;div class="box"&gt;Content&lt;/div&gt;  <br>
+  <input type="radio" name="q2"> &lt;div .class="box"&gt;Content&lt;/div&gt; <br>
+  <input type="radio" name="q2"> &lt;div #box&gt;Content&lt;/div&gt; <br>
+  <input type="radio" name="q2"> &lt;div class:box&gt;Content&lt;/div&gt; <br>
+</form>
+<h3>If "image.jpg" is inside an "images" folder, which is the correct file path to use in HTML?</h3>
+<form>
+  <input type="radio" name="q3"> &lt;img src="image.jpg"&gt; <br>
+  <input type="radio" name="q3"> &lt;img src="/images/image.jpg"&gt;  <br>
+  <input type="radio" name="q3"> &lt;img src="C:\images\image.jpg"&gt; <br>
+  <input type="radio" name="q3"> &lt;img src="./image.jpg"&gt; <br>
+</form>
+<hr>
+<h3> Ans Key:</h3>
+<p>1- &lt;p id="para1"&gt;This is a paragraph&lt;/p&gt; ✅</p>
+<p>2- &lt;div class="box"&gt;Content&lt;/div&gt; ✅</p>
+<p>3- &lt;img src="/images/image.jpg"&gt; ✅</p>
+
+<hr>
+<nav>
+            <a href="home.html">Home</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day2.html">Prev</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day4.html" target="_blank">Next</a>  
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+        </header>
+    
+</body>
+</html>

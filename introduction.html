@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of web dev</title>
+</head>
+<body>
+    <header>
+        <h1>Introduction of web devlepment:</h1>
+        <hr>
+        <nav>
+            <a href="home.html">Home</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day1.html" target="_blank">Next.</a>
+        </nav>
+        <hr>
+
+        <h2>Welcome, Introduction to web devlepment.</h2>
+
+        <table width="100%">
+  <tr>
+    <!-- Sidebar -->
+    <td width="25%" valign="top">
+      <h3>📑 Topics Overview</h3>
+      <ul>
+        <li> What is the Internet?</li>
+        <li>How is data transferred?</li>
+        <li>What is IP Address</li>
+        <li>How to access a website</li>
+        <li>Who assigns the IP Address?</li>
+        <li> IPv4 & IPv6</li>
+        <li>MAC Address Format</li>
+        <li> Port Number Format</li>
+        <li>Local Area Network, Switch & Router</li>
+        <li> What is a VPN?</li>
+       
+      </ul>
+    </td>
+
+    <!-- Main Notes -->
+    <td width="75%" valign="top">
+    </table>
+    <hr>
+    <h2>The Need to Share Information</h2>
+    <p>The most fundamental truth is that we have information on one computer (Computer A) and we want it to be on another computer (Computer B). These computers are not in the same room.<br>
+
+    How do we solve this? The simplest, most primitive way is to physically carry the information (e.g., on a USB stick). This works, but it's slow and doesn't scale. We need a direct, electronic connection.<br>
+
+    So, we run a cable (like an ethernet cable or a fiber optic line) between Computer A and Computer B. We can now send electrical <br>signals or pulses of light down this cable. We can agree on a simple code: a high-voltage signal means "1," and a low-voltage signal means "0."<br>
+
+    We have just created the most basic form of a network: a **direct link**. We can now send bits (1s and 0s) between two computers.</p>
+
+    <h2>The Problem of Connecting Networks</h2>
+    <p>Now, our office has a local network. Another office across town also has its own local network. How does a computer on our network talk to a computer on their network?<br>
+
+We face the same scaling problem. We can't run a wire from every computer in our office to every computer in theirs.<br>
+
+The logical solution is to connect the *networks themselves*. We need a special, dedicated computer that is connected to *our* network<br> and also connected to *their* network. Its only job is to pass messages, or "route" traffic, from one network to the other. Let's call this device a **Router**.<br>
+
+Now, if we want to connect to a third network, we just connect our router to their router. Suddenly, we can build a massive, sprawling web by connecting networks to other networks.<br>
+
+This is the fundamental truth of the Internet. The **Internet is a "network of networks."** It is not one giant cloud; it is millions of private and public local networks all connected by these special routing devices.<br></p>
+
+<h2>IP Address</h2>
+<p>An IPv4 (Internet Protocol version 4) address is the classic IP address format everyone is used to seeing.<br>
+    <ul>
+        <li>Structure: It's a 32-bit number. To make it readable for humans, we divide it into four 8-bit sections, and write each section as a decimal number from 0 to 255.</li>
+        <li>Example: 172.217.16.142 (one of Google's addresses)</li>
+        <li>The Big Problem (The Why): A 32-bit number means there's a hard limit on the total number of possible addresses: 2^32, which is about 4.3 billion.</li>
+    </ul>
+    When the internet was designed, 4.3 billion seemed like an infinite number.<br> But with the explosion of laptops, phones, servers, smart watches, and even smart refrigerators, we quickly realized we would run out. This scarcity is the single most important reason we have public and private IPs.
+
+    <img src="https://www.fortinet.com/content/dam/fortinet/images/cyberglossary/ip-address-types.jpeg" alt="ip address image" width="400" height="400">
+
+
+</p>
+
+<h2>Public IP Address.</h2>
+<p>A Public IP address is your global, unique address on the internet.</p>
+<ul>
+    <li><b>Analogy:</b> The company's main, public phone number.</li>
+    <li><b>Uniqueness:</b> It must be globally unique. No two devices on the internet can have the same public IP address at the same time.</li>
+    <li><b>Purpose: </b>To be reachable from anywhere in the world. This is the address that web servers, email servers, and any other public service use.</li>
+    <li><b>Assignment:</b> It is assigned to you by your Internet Service Provider (ISP) (Comcast, AT&T, etc.). You don't control it; you lease it from them.</li>
+</ul>
+
+<h2>Private IP Address.</h2>
+<p>A Private IP address is a local address used only within your own private network (e.g., your home Wi-Fi, your office network).
+<ul>
+    <li><b>Analogy: </b>The employee's private, 4-digit extension number.</li>
+    <li><b>Uniqueness: </b>It only needs to be unique on your local network.<br> My laptop can have the address 192.168.1.100 on my home Wi-Fi, and your laptop can have the exact same address on your home Wi-Fi. <br>They don't conflict because they are in separate, private networks.</li>
+    <li><b>Purpose:</b> To allow devices on the same local network to communicate with each other without needing a globally unique address for each one. <br>Your laptop talks to your printer using private IPs. Your phone streams to your Chromecast using private IPs.</li>
+</ul>
+
+<h2>IPv6</h2>
+<p>IPv6 (Internet Protocol version 6) is the next generation of the Internet Protocol.<br> Its primary purpose was to solve the address exhaustion problem of IPv4.
+
+    <h3>The fundamental difference is the size of the address:</h3>
+    <ul>
+        <li><b>IPv4:</b> Uses a 32-bit address, giving us ~4.3 billion unique addresses.</li>
+        <li><b>IPv6:</b> Uses a 128-bit address.</li>
+
+        The difference between 32-bit and 128-bit is not 4x. It's an exponential leap that is difficult to comprehend.<br>
+
+The number of possible IPv6 addresses is 2^128, which is roughly:<br>
+
+**340,000,000,000,000,000,000,000,000,000,000,000,000**
+
+(340 undecillion)
+    </ul>
+
+</p>
+
+
+</p>
+
+<h2>MAC Address:</h2>
+<p>A MAC <b>(Media Access Control)</b> Address is a unique, permanent serial number burned into<br> every network-capable piece of hardware (your laptop's Wi-Fi card, your phone, your smart TV, the network port on your desktop).
+
+    A MAC address is a 48-bit number. To make it readable for humans, <br>it's typically written as 12 hexadecimal digits.
+
+    <h3>The most common ways you'll see it displayed are:</h3>
+    <ol>
+        <li>Colon-Separated (Most Common):<br>3C:22:FB:A3:B4:C5</li>
+        <li>Hyphen-Separated (Common on Windows):<br>3C-22-FB-A3-B4-C5</li>
+        <li>Period-Separated (Used by Cisco and other network gear):<br>3c22.fba3.b4c5</li>
+        <li>No Separators (Less common, seen in some software)<br>3C22FBA3B4C5</li>
+    </ol>
+<img src="https://media.fs.com/images/ckfinder/ftp_images/tutorial/mac-addresse-numbers.jpg" alt="mac" width="400" height="400">
+
+
+</p>
+
+<h2>Port Number</h2>
+<p>Port numbers are numerical identifiers (0-65535) in computer networking that identify specific applications or services on a device.<br> They work with IP addresses to direct network traffic to the correct service on a machine,<br> with common ports assigned to standard applications like HTTP (port 80) and HTTPS (port 443).</p>
+
+<b>A port number is a 16-bit unsigned integer.</b>
+
+<h2>What is a VPN?</h2>
+<p><b>A Virtual Private Network (VPN)</b> creates an encrypted, private tunnel for your internet connection,<br> masking your IP address and protecting your online activity from being seen by third parties like your Internet Service Provider (ISP) or potential<br> cybercriminals on public networks. VPNs are used to enhance online privacy, secure data transmission,<br> and circumvent geo-restrictions or censorship by allowing you to appear as if you are browsing from the location of the VPN server. </p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6rLFqVzfcyYN1cb6ZcwNz-yZ_TZurzh-hbw&s" alt="vpn" width="400" height="300">
+<hr>
+
+<h2>>Quick Quiz</h2>
+<h2>1-Which version of IP uses 128-bit addresses?</h2>
+<form>
+  <input type="radio" name="q1"> IPv4 <br>
+  <input type="radio" name="q1"> IPv6 <br>
+  <input type="radio" name="q1"> MAC <br>
+  <input type="radio" name="q1"> VIP <br>
+</form>
+
+<h2>2- A MAC address is written in which format?</h2>
+<form>
+  <input type="radio" name="q2"> Decimal numbers separated by dots <br>
+  <input type="radio" name="q2"> Hexadecimal numbers separated by colons/hyphens  <br>
+  <input type="radio" name="q2"> Only binary numbers <br>
+  <input type="radio" name="q2"> Alphanumeric without separators <br>
+</form>
+
+<h2>3- What is the main use of a Virtual IP (VIP)?</h2>
+<form>
+  <input type="radio" name="q3"> Identifying physical devices on LAN <br>
+  <input type="radio" name="q3"> Providing redundancy and load balancing  <br>
+  <input type="radio" name="q3"> Assigning a permanent address to a NIC <br>
+  <input type="radio" name="q3"> Converting domain names to IPs <br>
+</form>
+<hr>
+
+<h3>Ans Key:</h3>
+<p>1- IPv6 ✅</p>
+<p>2- Hexadecimal numbers separated by colons/hyphens ✅</p>
+<p>3- Providing redundancy and load balancing ✅</p>
+<hr>
+<nav>
+            <a href="home.html">Home</a>&nbsp;&nabla;&nbsp;&nbsp;
+            <a href="day1.html" target="_blank">Next.</a>
+        </nav>
+
+
+
+
+</header>
+    
+
+    
+</body>
+</html>
